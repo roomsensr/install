@@ -18,6 +18,16 @@ homeassistant:
 pyscript:
   allow_all_imports: true
   hass_is_global: true
+#config for lovelace dash
+lovelace:
+  mode: storage
+  dashboards:
+    lovelace-roomsense:
+      mode: yaml
+      title: RoomSense IQ
+      icon: mdi:script
+      show_in_sidebar: true
+      filename: dashboards.yaml
 ````
 ## script to get all files:(make sure you are in config directory)
       curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get.sh | bash -s
