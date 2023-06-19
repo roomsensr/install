@@ -27,8 +27,8 @@ fi
 if [ -d "$DESTINATION_FOLDER3" ]; then
     mv temp_dir/cards/* $DESTINATION_FOLDER3
 else
-    if [ -d "www" ]; then
-        mkdir www  
+    if [ ! -d "www" ]; then
+        mkdir www
     fi
     mkdir $DESTINATION_FOLDER3
     mv temp_dir/cards/* $DESTINATION_FOLDER3
