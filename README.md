@@ -29,5 +29,25 @@ lovelace:
       show_in_sidebar: true
       filename: dashboards.yaml
 ````
-## script to get all files:(make sure you are in config directory)
+
+## In Dashboards add resources below if you are using script with cards
+>  NOTE: This area is only available when the active user's profile has "advanced mode" enabled.
+
+| URL  | type|
+|---------------------------------------|-----------------|
+|/local/cards/apexcharts-card-rs.js     |JavaScript Module|
+|/local/cards/button-card.js            |JavaScript Module|
+|/local/cards/card-mod.js               |JavaScript Module|
+|/local/cards/mini-graph-card-bundle.js |JavaScript Module|
+|/local/cards/numberbox-card.js         |JavaScript Module|
+|/local/cards/slider-entity-row.js      |JavaScript Module|
+
+## script to get files without cards folder:
+> make sure you are in config directory
+
       curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get.sh | bash -s
+
+## script to get all files:
+> make sure you are in config directory
+
+      curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get-all.sh | bash -s
