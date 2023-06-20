@@ -39,6 +39,7 @@ lovelace:
 
 ## In Dashboards add resources below if you are not using cards installed using HACS
 >  NOTE: This area is only available when the active user's profile has "advanced mode" enabled.
+
 >  NOTE: Make sure you don't add cards you have installed using HACS as it can cause issues
 
 | URL  | type|
