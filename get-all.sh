@@ -48,6 +48,7 @@ fi
 
 mv temp_dir/dash-design.yaml .
 mv temp_dir/dashboards.yaml .
+mv temp_dir/logo_transparent_background.png www
 
 # Cleanup - remove the temporary directory
 rm -rf temp_dir
