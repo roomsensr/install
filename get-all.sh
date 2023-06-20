@@ -45,5 +45,9 @@ else
     unzip pyscript-release.zip -d "$DESTINATION_FOLDER4"
     rm pyscript-release.zip
 fi
+
+mv temp_dir/dash-design.yaml .
+mv temp_dir/dashboards.yaml .
+
 # Cleanup - remove the temporary directory
 rm -rf temp_dir
