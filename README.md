@@ -1,24 +1,12 @@
 ## Installation
 
 ## How to install
-1. Run one of the two scripts below:
-   - If you want to get all files, use the first script.
-   - If you don't need the cards folder (cards installed from HACS), use the second script.
-
-    > **Make sure you are in the config directory before running these scripts.**
-
-    Get all files:
+1. Run script below in ssh:
+    > **Make sure you are in the config directory before running script.**
 
     ```bash
     curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get-all.sh | bash -s
     ```
-
-    Get files without cards folder:
-
-    ```bash
-    curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get.sh | bash -s
-    ```
-
 2. Restart Home Assistant.
 3. Add the necessary configuration to your `configuration.yaml` file (details provided below).
 4. If you're not using cards installed using HACS, add the specified resources to Lovelace (details provided below).
@@ -26,7 +14,7 @@
    
 
 ## After install make sure you have configured: 
-````
+```
 homeassistant:
       packages: !include_dir_named packages
 #config for pyscript
@@ -43,16 +31,16 @@ lovelace:
       icon: mdi:script
       show_in_sidebar: true
       filename: dashboards.yaml
-````
+```
 
-## In Dashboards add resources below if you are not using cards installed using HACS
+## In Settings page > Dashboards > right top corner icon add resources below if you don't have that card installed using HACS
 >  NOTE: This area is only available when the active user's profile has "advanced mode" enabled.
 
 >  NOTE: Make sure you don't add cards you have installed using HACS as it can cause issues
 
 | URL  | type|
 |---------------------------------------|-----------------|
-|/local/cards/apexcharts-card-rs.js     |JavaScript Module|
+|/local/cards/apexcharts-card.js       |JavaScript Module|
 |/local/cards/button-card.js            |JavaScript Module|
 |/local/cards/card-mod.js               |JavaScript Module|
 |/local/cards/mini-graph-card-bundle.js |JavaScript Module|
@@ -70,4 +58,4 @@ lovelace:
  - card-mod [https://github.com/thomasloven/lovelace-card-mod] 
  - Lovelace Mini Graph Card [https://github.com/kalkih/mini-graph-card]
  - numberbox-card [https://github.com/htmltiger/numberbox-card]
- - slider-entity-row [https://github.com/thomasloven/lovelace-slider-entity-row
+ - slider-entity-row [https://github.com/thomasloven/lovelace-slider-entity-row]
