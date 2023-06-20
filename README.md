@@ -1,21 +1,29 @@
 ## Installation
 
 ## How to install
-1. run script (with or without cards)
-2. restart HA
-3. add config to configuration.yaml
-4. add resources to lovelace if you aren't using cards installed using HACS
-5. restart HA
-### script to get all files:
-> make sure you are in config directory
+1. Run one of the two scripts below:
+   - If you want to get all files, use the first script.
+   - If you don't need the cards folder (cards installed from HACS), use the second script.
 
-      curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get-all.sh | bash -s
+    > **Make sure you are in the config directory before running these scripts.**
 
-### script to get files without cards folder(cards installed from hacs):
-> make sure you are in config directory
+    Get all files:
 
-      curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get.sh | bash -s
+    ```bash
+    curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get-all.sh | bash -s
+    ```
 
+    Get files without cards folder:
+
+    ```bash
+    curl -sL  https://raw.githubusercontent.com/roomsensr/install/main/get.sh | bash -s
+    ```
+
+2. Restart Home Assistant.
+3. Add the necessary configuration to your `configuration.yaml` file (details provided below).
+4. If you're not using cards installed using HACS, add the specified resources to Lovelace (details provided below).
+5. Restart HA again.
+   
 
 ## After install make sure you have configured: 
 ````
