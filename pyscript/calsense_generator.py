@@ -41,19 +41,22 @@ def generate_automation():
             {% endfor %}  {{ data.switch_entity_ids_to_turn_off | join(', ') }} {%
             if data.switch_entity_ids_to_turn_off | length == 0 %} none {% endif %}
     mode: single'''
-
-    entity_id_lines = ''
-    for sensor_id in sensor_ids:
-        entity_id_lines += f'\n            - switch.roomsense_calsense_{sensor_id}'
-    entity_id_lines = entity_id_lines.rstrip()  # Remove the last newline character
-
-    yaml_code = yaml_template1 + entity_id_lines + yaml_template2
-
-    generated_yaml = yaml_code.encode('utf-8')
-    
+    sensor_count = len(sensor_ids)
     file_path = 'packages/calsense_automation.yaml'
-    fd = os.open(file_path, os.O_WRONLY | os.O_CREAT)
-    os.write(fd, generated_yaml)
-    os.close(fd)
-    
-    print(f"Generated automation YAML code saved to {file_path}")
+    if sensor_count >= 2:
+        entity_id_lines = ''
+        for sensor_id in sensor_ids:
+            entity_id_lines += f'\n            - switch.roomsense_calsense_{sensor_id}'
+        entity_id_lines = entity_id_lines.rstrip()  # Remove the last newline character
+        yaml_code = yaml_template1 + entity_id_lines + yaml_template2
+        generated_yaml = yaml_code.encode('utf-8')
+        fd = os.open(file_path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
+        os.write(fd, generated_yaml)
+        os.close(fd)
+    else:
+        yaml_code1 = " "
+        generated_yaml1 = yaml_code1.encode('utf-8')
+        fd1 = os.open(file_path, os.O_WRONLY | os.O_CREAT | os.O_TRUNC)
+        os.write(fd1, generated_yaml1)
+        os.close(fd1)
+        
