@@ -5,7 +5,7 @@ DESTINATION_FOLDER="packages"
 DESTINATION_FOLDER2="pyscript"
 DESTINATION_FOLDER3="www/cards"
 DESTINATION_FOLDER4="custom_components/pyscript"
-PYSCRIPT_RELEASE_URL="https://github.com/custom-components/pyscript/releases/download/1.4.0/hass-custom-pyscript.zip"
+PYSCRIPT_RELEASE_URL="https://github.com/custom-components/pyscript/releases/download/1.5.0/hass-custom-pyscript.zip"
 # Clone the repository
 git clone $REPO_URL temp_dir
 
